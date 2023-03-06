@@ -16,8 +16,8 @@ const ThemeButton = () => {
 
   return (
     <button type='button' onClick={changeTheme} className='my-auto mx-4'>
-        <BsFillMoonFill className={dark ? 'hidden' : 'hover:scale-110 ease-in duration-100'} color={'black'} size={26}/>
-        <BsSunFill className={dark ? 'hover:scale-110 ease-in duration-100' : 'hidden'} color={'white'} size={26}/>
+        <BsFillMoonFill className={dark ? 'hidden' : 'hidden sm:flex hover:scale-110 ease-in duration-100'} color={'black'} size={26}/>
+        <BsSunFill className={dark ? 'hidden sm:flex hover:scale-110 ease-in duration-100' : 'hidden'} color={'white'} size={26}/>
     </button>
   )
 }
