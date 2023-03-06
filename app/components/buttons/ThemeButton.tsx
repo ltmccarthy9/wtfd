@@ -1,10 +1,14 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { BsFillMoonFill, BsSunFill } from 'react-icons/bs'
+
+// this is our
 const ThemeButton = () => {
 
+    // state for determining display of moon or sun icon
     const [ dark, setDark ] = useState(false)
 
+    // this toggles between our dark and light theme
     const changeTheme = () => {
         document.documentElement.classList.toggle('dark');
         setDark(!dark)

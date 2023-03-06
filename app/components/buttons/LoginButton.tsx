@@ -1,6 +1,6 @@
 'use client'
 
-
+// login button in nav
 const LoginButton = () => {
   return (
     <button className='m-auto border-2 border-indigo-500 bg-indigo-500 px-5 py-2

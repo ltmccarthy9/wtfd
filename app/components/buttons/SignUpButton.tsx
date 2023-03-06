@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+//Sign up button in nav
 const SignUpButton = () => {
   return (
     <button className='m-auto border-2 border-indigo-500 px-5 py-2
