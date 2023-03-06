@@ -13,10 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=' bg-slate-100'>
+      <body className=' bg-slate-50'>
         <Nav/>
         {children}
-        </body>
+      </body>
     </html>
   )
 }
