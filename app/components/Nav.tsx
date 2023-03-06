@@ -2,6 +2,8 @@
 import React from 'react'
 import LoginButton from './buttons/LoginButton'
 import SignUpButton from './buttons/SignUpButton'
+import ThemeButton from './buttons/ThemeButton'
+
 const Nav = () => {
   return (
     <nav className='bg-white dark:bg-[#343c48] w-full fixed h-16'>
@@ -13,6 +15,7 @@ const Nav = () => {
                 <a className='text-gray-700 dark:text-gray-50 m-auto font-bold cursor-pointer'>About</a>
             </div>
             <div className='flex gap-2'>
+                <ThemeButton/>
                 <LoginButton/>
                 <SignUpButton/>
             </div>
