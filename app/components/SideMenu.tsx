@@ -10,8 +10,8 @@ const SideMenu = () => {
     return (
     <div className={menuActive ? 'fixed h-screen mt-16 w-full bg-black/70 sm:hidden ' : 'sm:hidden'}>
     
-    <button type='button' onClick={() => setMenuActive(!menuActive)} className='fixed sm:hidden top-5 right-5'>
-        <CgMenuRight color='black' size={26}/>
+    <button type='button' onClick={() => setMenuActive(!menuActive)} className='fixed sm:hidden top-5 right-5 text-black dark:text-white'>
+        <CgMenuRight size={26}/>
     </button>
 
     </div>
