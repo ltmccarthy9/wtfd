@@ -39,7 +39,7 @@ const SignUpButton = ({ px, m, text, display }: SignUpProps) => {
               <input type='email' className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='email'></input>
               <input type='password' className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='password'></input>
               <input type='password' className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='re-enter password'></input>
-              <button type='submit' className='bg-indigo-500 rounded-lg p-2 font-semibold hover:bg-indigo-600 ease-in duration-100 mt-6 mb-10'>Sign up</button>
+              <button type='submit' className='bg-indigo-500 text-gray-50 rounded-lg p-2 font-semibold hover:bg-indigo-600 ease-in duration-100 mt-6 mb-10'>Sign up</button>
             </div>
           </div>
         </div>

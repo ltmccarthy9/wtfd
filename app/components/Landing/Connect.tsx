@@ -8,13 +8,13 @@ const Connect = () => {
             <h2 className=' text-gray-50 text-4xl font-bold mb-2 m-auto'>Connect</h2>
             <div className='flex gap-8'>
                 <a href='https://github.com/ltmccarthy9' target='_blank' className='ml-auto cursor-pointer hover:scale-110 ease-in duration-150'>
-                    <BsGithub size={40}/>
+                    <BsGithub color='#f9fafb' size={40}/>
                 </a>
                 <a href='https://www.linkedin.com/in/liam-mccarthy-b06b9a218' target='_blank' className='cursor-pointer hover:scale-110 ease-in duration-150'>
-                    <BsLinkedin size={40}/>
+                    <BsLinkedin color='#f9fafb' size={40}/>
                 </a>
                 <a href='https://nextjs-portfolio-ltmccarthy9.vercel.app/' target='_blank' className='mr-auto cursor-pointer hover:scale-110 ease-in duration-150'>
-                    <BsFillFileEarmarkPersonFill size={40}/>
+                    <BsFillFileEarmarkPersonFill color='#f9fafb' size={40}/>
                 </a>
             </div>   
         </div>
