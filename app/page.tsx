@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-
   return (
     <main id='landing' className='flex flex-col'>
         <div className='h-screen p-6 flex flex-col gap-8 mx-auto mt-20 sm:mt-40 w-full max-w-7xl text-4xl md:text-5xl
@@ -26,12 +25,8 @@ export default function Home() {
         
           <SignUpButton px='px-20' text='text-lg' m='' display='flex' />
         </div>
-
-     
             <About/>
             <Connect />
-      
- 
     </main>
   )
 }

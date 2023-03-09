@@ -1,6 +1,5 @@
-
+'use client'
 import React from 'react'
-import Link from 'next/link'
 import LoginButton from './buttons/LoginButton'
 import SignUpButton from './buttons/SignUpButton'
 import ThemeButton from './buttons/ThemeButton'
@@ -10,6 +9,8 @@ import { useState } from 'react'
 
 const Nav = () => {
   
+  const [dark, setDark] = useState(false);
+
     return (
     <nav className='bg-white dark:bg-[#343c48] w-full fixed h-16'>
       <div className='flex h-full justify-between max-w-7xl m-auto '>
@@ -25,12 +26,12 @@ const Nav = () => {
               </a>   
             </div>
             <div className='flex gap-2 pr-2'>
-                <ThemeButton/>
-                <LoginButton />
+                <ThemeButton display='hidden sm:flex' dark={dark} setDark={setDark}/>
+                <LoginButton display='hidden sm:flex' />
                 <SignUpButton px='px-4' m='m-auto' text='text-base' display='hidden sm:flex'/>
             </div>
         </div>
-        <SideMenu/>
+        <SideMenu dark={dark} setDark={setDark}/>
       </div>
     </nav>
   )

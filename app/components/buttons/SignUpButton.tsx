@@ -11,7 +11,6 @@ type SignUpProps = {
   display: string
 }
 
-//Sign up button in nav
 const SignUpButton = ({ px, m, text, display }: SignUpProps) => {
 
   const [ signinActive, setSigninActive ] = useState(false)
