@@ -17,7 +17,7 @@ https://what-the-fam-doing.vercel.app
 * TypeScript
 * Tailwind CSS
 
-![alt text](public\wtfd.png)
+![alt text](./public/wtfd.png)
 
 
 
