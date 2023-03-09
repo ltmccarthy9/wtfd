@@ -24,20 +24,22 @@ const SignUpButton = ({ px, m, text, display }: SignUpProps) => {
         </button>
 
         <div className={signinActive ? 'fixed h-screen w-full top-0 right-0 bg-black/60 p-2' : 'm-auto hidden'}>
-          <div className={signinActive ? "bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mx-auto mt-40 max-w-md h-fit flex flex-col" : 'hidden'}>
-              <div className='flex justify-between px-6 py-4 mt-4'>
+          <div className={signinActive ? "bg-gray-50 dark:bg-gray-700 rounded-lg mx-auto mt-16 sm:mt-40 max-w-md h-fit flex flex-col" : 'hidden'}>
+              <div className='flex justify-between m-8'>
                 <h2 className='text-indigo-500 dark:text-indigo-400 text-2xl font-bold'>Sign Up</h2>
                 <button type='button' onClick={() => setSigninActive(false)}>
                   <RxCross2 className='hover:scale-110 ease-in duration-100 text-gray-700 dark:text-gray-50' size={23}/>
                 </button>
               </div>
-            <div className='flex flex-col gap-6 mt-4 w-5/6 m-auto text-base font-normal'>
-              <input className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='first name'></input>
-              <input className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='last name'></input>
+            <div className='flex flex-col gap-6 mt-2 w-5/6 m-auto text-base font-normal'>
+              <div className='flex gap-2'>
+                <input className='w-1/2 p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='first name'></input>
+                <input className='w-1/2 p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='last name'></input>
+              </div>
               <input type='email' className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='email'></input>
               <input type='password' className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='password'></input>
               <input type='password' className='p-2 focus:outline-none text-gray-700 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 border-b border-indigo-500' placeholder='re-enter password'></input>
-              <button type='submit' className='bg-indigo-500 rounded-lg p-2 font-semibold hover:bg-indigo-600 ease-in duration-100 mt-2 mb-10'>Sign up</button>
+              <button type='submit' className='bg-indigo-500 rounded-lg p-2 font-semibold hover:bg-indigo-600 ease-in duration-100 mt-6 mb-10'>Sign up</button>
             </div>
           </div>
         </div>
