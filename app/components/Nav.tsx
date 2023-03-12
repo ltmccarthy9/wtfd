@@ -1,15 +1,16 @@
 'use client'
-import React from 'react'
 import LoginButton from './buttons/LoginButton'
 import SignUpButton from './buttons/SignUpButton'
 import ThemeButton from './buttons/ThemeButton'
 import SideMenu from './SideMenu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { getServerSession } from 'next-auth/next'
+import { authOptions } from '../api/hello/auth/[...nextAuth]'
 
 
-const Nav = () => {
+export default function Nav() {
   
-  const [dark, setDark] = useState(false);
+    const [dark, setDark] = useState(false);
 
     return (
     <nav className='bg-white dark:bg-[#343c48] w-full fixed h-16'>
@@ -37,4 +38,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+

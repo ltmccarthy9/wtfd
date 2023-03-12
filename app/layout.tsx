@@ -1,6 +1,6 @@
 
 import './globals.css'
-import Nav from './components/Nav'
+
 import React from 'react'
 
 
@@ -17,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=' bg-slate-50 dark:bg-gray-700'>
-          <Nav/>
           {children}
       </body>
     </html>

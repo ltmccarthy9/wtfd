@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { BsGithub, BsLinkedin, BsFillFileEarmarkPersonFill } from 'react-icons/bs'
 
 const Connect = () => {
