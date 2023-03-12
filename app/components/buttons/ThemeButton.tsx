@@ -3,12 +3,13 @@ import React from 'react'
 import { BsFillMoonFill, BsSunFill } from 'react-icons/bs'
 
 type Display = {
-  display: string
-  dark: boolean,
-  setDark: React.Dispatch<React.SetStateAction<boolean>>
+  display: string;
+  dark: boolean;
+  displayOuter: string
+  setDark: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ThemeButton = ({display, dark, setDark}: Display) => {
+const ThemeButton = ({display, displayOuter, dark, setDark}: Display) => {
 
     const changeTheme = () => {
         document.documentElement.classList.toggle('dark');
@@ -16,7 +17,7 @@ const ThemeButton = ({display, dark, setDark}: Display) => {
       }
 
   return (
-    <button type='button' onClick={changeTheme} className='my-auto mx-4'>
+    <button type='button' onClick={changeTheme} className={`${displayOuter}`}>
         <BsFillMoonFill className={dark ? 'hidden' : `${display} hover:scale-110 ease-in duration-100`} color={'black'} size={22}/>
         <BsSunFill className={dark ? `${display} hover:scale-110 ease-in duration-100` : 'hidden'} color={'white'} size={22}/>
     </button>

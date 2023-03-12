@@ -35,7 +35,7 @@ const SideMenu = ({dark, setDark}: Display) => {
                 <LoginButton display='flex sm:hidden'/>
                 <SignUpButton px='px-4' m='m-auto' text='text-base' display='flex sm:hidden'/>
                 <div className='m-auto'>
-                  <ThemeButton display='flex sm:hidden' dark={dark} setDark={setDark}/>
+                  <ThemeButton display='flex sm:hidden' displayOuter='mx-auto' dark={dark} setDark={setDark}/>
                 </div>   
               </div>
           </div>

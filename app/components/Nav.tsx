@@ -27,7 +27,7 @@ export default function Nav() {
               </a>   
             </div>
             <div className='flex gap-2 pr-2'>
-                <ThemeButton display='hidden sm:flex' dark={dark} setDark={setDark}/>
+                <ThemeButton display='hidden sm:flex' displayOuter='ml-auto mr-2' dark={dark} setDark={setDark}/>
                 <LoginButton display='hidden sm:flex' />
                 <SignUpButton px='px-4' m='m-auto' text='text-base' display='hidden sm:flex'/>
             </div>
