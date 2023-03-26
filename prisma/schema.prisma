@@ -8,6 +8,62 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  posts         Post[]  
+  comments      Comment[]
+  families      Family[]
+  pods          Pod[]
+}
+
+model Post {
+  id        String    @id @default(cuid())
+  createdAd DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  title     String
+  published Boolean   @default(false)
+  likes     Int
+  userId    String
+  familyId  String
+  user      User      @relation(fields: [userId], references: [id])
+  family    Family    @relation(fields: [familyId], references: [id])
+}
+
+model Family {
+  id        String  @id @default(cuid())
+  createdAd DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Name      String
+  members   User[]
+  posts     Post[]
+  pods      Pod[]
+}
+
+model Comment {
+  id        String  @id @default(cuid())
+  createdAd DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  body      String
+  likes     Int    
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])     
+}
+
+model Pod {
+  id        String  @id @default(cuid())
+  createdAd DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  familyId  String
+  family    Family    @relation(fields: [familyId], references: [id])    
+  members   User[]
+}
+
 model Account {
   id                 String  @id @default(cuid())
   userId             String
@@ -33,27 +89,6 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-}
-
-model Post {
-  id        String    @id @default(cuid())
-  createdAd DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  title     String
-  published Boolean   @default(false)
-  userId    String
-  user      User      @relation(fields: [userId], references: [id])
-}
-
-model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
-  posts         Post[]  
 }
 
 model VerificationToken {

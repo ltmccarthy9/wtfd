@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 export default function SideNav() {
 
-    const [nav, setNav ] = useState(true);
+    const [nav, setNav ] = useState(false);
 
     return (
         <nav className={nav ? "h-screen w-56 bg-white dark:bg-[#343c48] shadow-md dark:shadow-gray-800 fixed top-0 left-0 ease-in duration-200 z-20"
