@@ -1,9 +1,17 @@
 
+import { getServerSession } from "next-auth"
+import { authOptions } from "app/api/hello/auth/[...nextAuth]"
+import { redirect } from "next/navigation"
 import SideNav from "../components/SideNav"
 import TopBar from "../components/TopBar"
 import Family from "../components/cards/Family"
 import Add from "../components/cards/Add"
-export default function Home(){
+
+export default async function Home(){
+    const session = await getServerSession(authOptions)
+    if (!session) {
+        redirect("/")
+    }
 
     return(
         <main className="pl-16 pt-14 pb-4 pr-4 h-screen">
